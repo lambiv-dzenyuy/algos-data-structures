@@ -39,4 +39,11 @@ class R1DzenyuyTest {
     public void testNumberOFvowels(){
         assertEquals(5,ob.numberOfVowels("aeoui"));
     }
+
+    //test remove punctuation
+    @Test
+    public void testRemovePunctuation(){
+        assertEquals("Hello World", new String(ob.removePonctuation("Hello, World!")));
+    }
+
 }

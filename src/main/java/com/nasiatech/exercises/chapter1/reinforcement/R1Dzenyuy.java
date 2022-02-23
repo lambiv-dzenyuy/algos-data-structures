@@ -88,4 +88,19 @@ public class R1Dzenyuy {
         }
         return total;
     }
+
+    //method to remove punctuation from a string buffer
+    public StringBuilder removePonctuation(String s)
+    {
+        StringBuilder sb = new StringBuilder(s);
+
+        for(int i=0; i<sb.length(); i++)
+        {
+            char c = sb.charAt(i);
+            if(!Character.isAlphabetic(c) && !Character.isDigit(c) && !Character.isWhitespace(c))
+                    sb.deleteCharAt(i);
+
+        }
+        return sb;
+    }
 }
