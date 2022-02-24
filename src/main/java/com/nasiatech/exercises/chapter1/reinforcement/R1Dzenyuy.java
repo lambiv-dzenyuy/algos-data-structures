@@ -3,7 +3,7 @@ package com.nasiatech.exercises.chapter1.reinforcement;
 import java.util.Scanner;
 
 public class R1Dzenyuy {
-    private static Scanner input = new Scanner(System.in);
+    private static final Scanner input = new Scanner(System.in);
 
     public void inputAllBaseTypes(){
         System.out.print("Enter a string :");
@@ -71,7 +71,7 @@ public class R1Dzenyuy {
     public long SumOfSquares(long n)
     {
         long total =0;
-        for(int i=1; i<=n; i++)
+        for(long i=1; i<=n; i++)
         {
             total+=i*i;
         }
@@ -82,8 +82,8 @@ public class R1Dzenyuy {
         int total = 0;
         for(int i =0; i<s.length(); i++)
         {
-            char c = s.charAt(i);
-            if(c=='a' || c=='A' || c=='e' || c=='E' || c=='o' || c== 'O' || c=='u' || c=='U' || c=='i' || c=='I')
+            char c = s.toLowerCase().charAt(i);
+            if(c=='a'  || c=='e' || c=='o'  || c=='u' || c=='i')
                 total++;
         }
         return total;
@@ -102,5 +102,52 @@ public class R1Dzenyuy {
 
         }
         return sb;
+    }
+}
+
+class Flower
+{
+    private  String name;
+    private int numberOfPetals;
+    private float price;
+
+
+    //constructor
+    public Flower(String s, int n, float f)
+    {
+        name = s;
+        numberOfPetals = n;
+        price = f;
+    }
+
+    //setter functions for each data member
+    public  void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setNumberOfPetals(int n)
+    {
+        numberOfPetals = n;
+    }
+
+    public void setPrice(float price)
+    {
+        this.price = price;
+    }
+
+    //getters for each data e=member
+    public String getName()
+    {
+        return name;
+    }
+
+    public int getNumberOfPetals()
+    {
+        return numberOfPetals;
+    }
+
+    public float getPrice() {
+        return price;
     }
 }

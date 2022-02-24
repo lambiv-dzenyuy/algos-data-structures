@@ -1,6 +1,9 @@
 package com.nasiatech.exercises.chapter1.reinforcement;
 
+import com.sun.security.jgss.GSSUtil;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,6 +47,14 @@ class R1DzenyuyTest {
     @Test
     public void testRemovePunctuation(){
         assertEquals("Hello World", new String(ob.removePonctuation("Hello, World!")));
+    }
+
+
+    public static void main(String[] args) {
+        //test for class Flower
+        Flower flower = new Flower("Lantana", 34, 4500);
+        System.out.printf("%-10s%-5s%12s\n","Flower","Petals","Price");
+        System.out.printf("%-10s%-5d%12.3f\n",flower.getName(),flower.getNumberOfPetals(), flower.getPrice());
     }
 
 }
